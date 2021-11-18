@@ -111,10 +111,7 @@ router.beforeEach(async(to, from, next) => {
           //  TIP:  API没有失效! 为什么停留在当前路由上，浏览器刷新时找不到该路由？？？
           router.addRoutes(interfaceRoutes)
           // console.log(interfaceRoutes)xq
-          next({
-            ...to,
-            replace: true
-          })
+          next({ ...to, replace: true })
           // #endregion
         } catch (error) {
           // remove token and go to login page to re-login

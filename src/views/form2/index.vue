@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: 'FormIndex',
+  name: 'Form2Index',
   data() {
     return {
       form: {

@@ -143,9 +143,7 @@ export default {
         const { fullPath } = view
         this.$nextTick(() => {
           this.$router.replace({
-            //  TIP: 刷新PATH 变更
-            //  path: '/redirect' + fullPath
-            path: fullPath
+            path: '/redirect' + fullPath
           })
         })
       })

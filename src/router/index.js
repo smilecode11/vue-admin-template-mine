@@ -7,6 +7,16 @@ Vue.use(Router)
 import Layout from '@/layout'
 
 export const constantRoutes = [{
+  path: '/redirect',
+  component: Layout,
+  hidden: true,
+  children: [
+    {
+      path: '/redirect/:path(.*)',
+      component: () => import('@/views/redirect/index')
+    }
+  ]
+}, {
   path: '/login',
   component: () => import('@/views/login/index'),
   hidden: true
@@ -51,7 +61,7 @@ export const constantRoutes = [{
     meta: {
       title: '表单',
       icon: 'form',
-      templateId: 'temp_1'
+      noCache: true
     }
   },
   {

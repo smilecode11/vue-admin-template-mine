@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'FormOther',
+  name: 'Form2Other',
   data() {
     return {}
   }
