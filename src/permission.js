@@ -36,7 +36,6 @@ router.beforeEach(async(to, from, next) => {
     } else {
       const hasGetUserInfo = store.getters.name
       if (hasGetUserInfo) {
-        console.log('hasUserInfo')
         next()
       } else {
         try {
@@ -110,7 +109,6 @@ router.beforeEach(async(to, from, next) => {
           const interfaceRoutes = await store.dispatch('permission/interfaceRoutes', routes)
           //  TIP:  API没有失效! 为什么停留在当前路由上，浏览器刷新时找不到该路由？？？
           router.addRoutes(interfaceRoutes)
-          // console.log(interfaceRoutes)xq
           next({ ...to, replace: true })
           // #endregion
         } catch (error) {
